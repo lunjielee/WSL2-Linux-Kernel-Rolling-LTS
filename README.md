@@ -95,6 +95,48 @@ the [Issues tab][issue].
 If you want to fix a bug or add new features, Please use the [Pull Request][pr].
 
 # Build Instructions
+Instructions for building WSL2 kernel with Ubuntu container are
+as follows:
+
+1. Create a new Ubuntu container:  
+   `$ docker run -it --rm --name wsl2-kernel-builder -v $PWD:/output ubuntu:22.04`
+
+2. Install the build dependencies (Ubuntu):  
+   `$ apt update && apt install -y build-essential git flex bc bison dwarves libssl-dev libelf-dev cpio qemu-utils`
+
+3. Go to output dir and clone the WSL2 kernel source code:  
+   `$ cd /output && git clone https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS.git && cd WSL2-Linux-Kernel-Rolling-LTS`
+
+4. Build the kernel using the WSL2 kernel configuration (x86):  
+   `$ make KCONFIG_CONFIG=arch/x86/configs/config-wsl-x86`
+
+5. Exit the container and save the module to a separate folder (Optional. Only for local build):  
+   `$ sudo make modules_install`
+
+   Or
+
+   `$ sudo ./Microsoft/scripts/gen_modules_vhdx.sh "$PWD/modules" $(make -s kernelrelease) modules.vhdx`
+
+   To create a VHDX image with kernel modules.
+
+Instructions for building WSL2 kernel with Ubuntu are
+as follows:
+
+1. Install the build dependencies (Ubuntu):  
+   `$ sudo apt install build-essential flex bc bison dwarves libssl-dev libelf-dev cpio qemu-utils`
+
+2. Build the kernel using the WSL2 kernel configuration (x86):  
+   `$ make KCONFIG_CONFIG=arch/x86/configs/config-wsl-x86`
+
+3. Save the module to a separate folder (Optional. Only for local build):  
+   `$ sudo make modules_install`
+
+   Or
+
+   `$ sudo ./Microsoft/scripts/gen_modules_vhdx.sh "$PWD/modules" $(make -s kernelrelease) modules.vhdx`
+
+   To create a VHDX image with kernel modules.
+
 Instructions for building WSL2 kernel with an Arch Linux distribution are
 as follows:
 
