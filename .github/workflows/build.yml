@@ -36,7 +36,7 @@ jobs:
 
       - name: Download WSL2 LTS kernel
         run: |
-          git clone https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS.git --depth 1 -b ${{ github.ref_name }} linux
+          git clone https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS.git --depth 1 -b ${{ github.ref_name }} linux
 
       - name: Build WSL2 LTS kernel
         run: |
