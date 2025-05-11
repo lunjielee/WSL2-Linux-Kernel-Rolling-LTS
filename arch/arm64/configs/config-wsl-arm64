@@ -3381,7 +3381,11 @@ CONFIG_SYNC_FILE=y
 # CONFIG_DMABUF_MOVE_NOTIFY is not set
 # CONFIG_DMABUF_DEBUG is not set
 # CONFIG_DMABUF_SELFTESTS is not set
-# CONFIG_DMABUF_HEAPS is not set
+
+# codec2 required, can use ION for legacy kernel
+CONFIG_DMABUF_HEAPS=y
+CONFIG_DMABUF_HEAPS_SYSTEM=y
+
 # CONFIG_DMABUF_SYSFS_STATS is not set
 # end of DMABUF options
 
@@ -3711,6 +3715,13 @@ CONFIG_RAS=y
 # Android
 #
 # CONFIG_ANDROID_BINDER_IPC is not set
+
+# binderfs required
+CONFIG_ANDROID=y
+CONFIG_ANDROID_BINDER_IPC=y
+CONFIG_ANDROID_BINDERFS=y
+CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
+
 # end of Android
 
 CONFIG_LIBNVDIMM=y
