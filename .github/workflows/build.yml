@@ -216,7 +216,7 @@ jobs:
           tag_name: ${{ github.ref_name }}
           body: |
             **WARNING**
-            ARM64 kernel has not been tested. If you have any issues, please leave an issue on the [Issues tab](https://github.com/Nevuly/WSL2-Rolling-Kernel-Issue/issues)!
+            ARM64 kernel has not been tested. If you have any issues, please leave an issue on the [Issues tab](https://github.com/lunjielee/WSL2-Rolling-Kernel-Issue/issues)!
 
             **Hash Information**
             | File Name | SHA-256 Checksum |
@@ -233,7 +233,7 @@ jobs:
             Check this [document](https://learn.microsoft.com/en-us/windows/wsl/wsl-config).
 
             **How to install kernel additional package in WSL2?**
-            Please check this [guideline](https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/wiki#kernel-additional-package-installation)
+            Please check this [guideline](https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS/wiki#kernel-additional-package-installation)
 
             **This kernel built on ArchLinux.**
 

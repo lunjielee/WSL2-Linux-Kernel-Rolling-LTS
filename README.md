@@ -62,7 +62,7 @@ Scoop will automatically set kernel in `.wslconfig`.
 ### 2-1. Install Additional Package in WSL2 Directly
 ```bash
 # Please change latest version of kernel and select your architecture
-wget https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/releases/download/linux-wsl-lts-**x.x.x**/bzImage-**arch**-addon_install.tar.gz
+wget https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS/releases/download/linux-wsl-lts-**x.x.x**/bzImage-**arch**-addon_install.tar.gz
 
 tar -xzvf bzImage-**arch**-addon_install.tar.gz
 
@@ -157,13 +157,13 @@ as follows:
  * The Linux community who created a awesome kernel.
  * Microsoft which produced WSL2 and dxgkrnl patches.
 
-[wsl2-kernel-6.12]: https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/tree/wsl-6.12-lts
-[wsl2-kernel-rolling-lts]: https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS
+[wsl2-kernel-6.12]: https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS/tree/wsl-6.12-lts
+[wsl2-kernel-rolling-lts]: https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS
 [about-wsl2]: https://docs.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2
-[gh-actions]: https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/actions
+[gh-actions]: https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS/actions
 [kernel-lts]: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/log/?h=linux-6.12.y
-[issue]: https://github.com/Nevuly/WSL2-Rolling-Kernel-Issue/issues
+[issue]: https://github.com/lunjielee/WSL2-Rolling-Kernel-Issue/issues
 [pr]: https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/pulls
 [install-inst]: https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig
-[releases-page]: https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS/releases/latest
+[releases-page]: https://github.com/lunjielee/WSL2-Linux-Kernel-Rolling-LTS/releases/latest
 [scoop-page]: https://scoop.sh/
